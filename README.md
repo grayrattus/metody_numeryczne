@@ -6,4 +6,5 @@ Rozwiązanie układu równań za pomocą metody Jacobiego znalazłem tutaj: http
 Dodatkowo śmieszy mnie, że osoby posiadające tytuł doktora używają nazw dla zmiennych, które nie są związane z algorytmem, który opisują.
 
 Quote of 2017:
+
 "Jeżeli nie potrafisz wytłumaczyć czegoś prostymi słowami to prawdopodobnie nie do końca rozumiesz to zagadnienie" -- ktoś kiedyś powiedział. Ja dodałbym do tego " albo wyżej srasz niż dupę masz".
