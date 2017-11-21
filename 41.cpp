@@ -4,30 +4,25 @@
 
 using namespace std;
 
+double func(double x) {
+    return (x * x * x) - (3.0 * x * x * x) + 2.5;
+}
+
 int main() {
-    double a = 2;
-    double b = 1;
-    double p_przedzialu = -10;
-    double k_przedzialu = 10;
-    double dokladnosc = 0.000005;
+    double a = 0;
+    double b = 5;
+    double dokladnosc = 0.0000005;
 
-    do {
-        double x = (p_przedzialu + k_przedzialu) / 2;
-        double y = a * x + b;
+    double c = a;
 
-        if (y == 0) {
-            cout << "X: " << x;
-        } else if (a * y < 0) {
-	    p_przedzialu = x;
-	    a = y;
+    while ((b - a) >= dokladnosc) {
+        c = (a + b) / 2;
+
+        if (func(a) * func(c) <= 0) {
+            b = c;
         } else {
-	    k_przedzialu = x;
-	    b = y;
-	}
-    } while (fabs(k_przedzialu - p_przedzialu) > dokladnosc);
-    cout << "a: " << a << endl;
-    cout << "b: " << b << endl;
-    cout << "p_przedzialu: " << p_przedzialu << endl;
-    cout << "k_przedzialu: " << k_przedzialu << endl;
-
+            a = c;
+        }
+    }
+        cout << "C: " << c << endl;
 }
