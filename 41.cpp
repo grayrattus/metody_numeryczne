@@ -9,20 +9,16 @@ double func(double x) {
 }
 
 int main() {
-    double a = 0;
-    double b = 5;
-    double dokladnosc = 0.0000005;
+    double a = -10;
+    double b = 10;
 
-    double c = a;
+    double krok = 0.5;
 
-    while ((b - a) >= dokladnosc) {
-        c = (a + b) / 2;
+    do {
+        a += krok;
+        b -= krok;
+    } while (func(a) * func(b) < 0 && fabs(b) - fabs(a) <= 1);
 
-        if (func(a) * func(c) <= 0) {
-            b = c;
-        } else {
-            a = c;
-        }
-    }
-        cout << "C: " << c << endl;
+    cout << "A:" << a;
+    cout << "B:" << b;
 }
