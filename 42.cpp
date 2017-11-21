@@ -8,10 +8,9 @@ double func(double x) {
     return (x * x * x) - (3.0 * x * x * x) + 2.5;
 }
 
-int main() {
-    double a = 0;
-    double b = 5;
-    double dokladnosc = 0.0000005;
+void oblicz(double a, double b, double dokladnosc) {
+    cout << "Metoda Połowienia z dokladnoscia " <<dokladnosc << endl;
+    int iteracja = 0;
 
     double c = a;
 
@@ -23,6 +22,19 @@ int main() {
         } else {
             a = c;
         }
+        iteracja++;
     }
-        cout << "C: " << c << endl;
+    cout << "Wynik: " << c << endl;
+    cout << "Iteracja: " << iteracja << endl;
+
+}
+
+int main() {
+    double a = 0;
+    double b = 5;
+    double dokladnosc = 0.000005;
+
+    oblicz(a,b,dokladnosc);
+    dokladnosc = 0.0005;
+    oblicz(a,b,dokladnosc);
 }
